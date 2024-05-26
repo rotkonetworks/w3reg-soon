@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - w3reg.org</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css">
+    <style>
+        [un-cloak] {
+            display: none;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+        .animate-pulse {
+            animation: pulse 3s infinite;
+        }
+        .bg-miami {
+            background: linear-gradient(90deg, #FF006E, #FB56B3, #20C1E6, #2AE9F2, #11ADC6);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+        body {
+            background-color:rgba(40, 10, 150, 0.2);
+        }
+    </style>
+    <script>
+    window.__unocss = {
+        rules: [
+            ['bg-miami', { 'background': 'linear-gradient(90deg, #FF006E, #FB56B3, #20C1E6, #2AE9F2, #11ADC6)' }],
+            ['text-shadow', { 'text-shadow': '2px 2px 4px rgba(0, 0, 0, 0.1)' }],
+        ],
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/uno.global.js" defer></script>
+</head>
+<body class="flex items-center justify-center min-h-screen text-gray-800" un-cloak>
+    <div class="container mx-auto p-5 bg-white shadow-lg border-2 border-gray-800 text-center rounded-lg transform transition duration-300 hover:scale-105 animate-pulse backdrop-blur bg-opacity-70 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+        <div class="mb-5">
+            <img src="./images/logo.png" alt="w3reg.org Logo" class="mx-auto w-full max-w-xs">
+        </div>
+        <h1 class="text-4xl font-bold mb-5 text-shadow">Coming Soon</h1>
+        <p class="text-lg mb-5 text-shadow bg-miami p-2 rounded">We're working hard to launch our new website. Stay tuned!</p>
+        <div class="mt-5">
+            <p class="text-lg text-black">For updates and more information, follow us on our 
+                <a href="https://matrix.to/#/#w3reg:matrix.org" target="_blank" class="text-blue-700 underline">Matrix channel</a>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
